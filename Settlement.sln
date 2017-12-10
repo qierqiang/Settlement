@@ -7,19 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Settlement.Client", "Settle
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Settlement.Model", "Settlement.Model\Settlement.Model.csproj", "{324D07E7-651E-4821-A33F-DD0A572987C8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reffer", "Reffer", "{CBDE33E9-CA81-46BC-80D0-A1590283C73C}"
-	ProjectSection(SolutionItems) = preProject
-		SnokyeBin\AppConfig.txt = SnokyeBin\AppConfig.txt
-		SnokyeBin\Newtonsoft.Json.dll = SnokyeBin\Newtonsoft.Json.dll
-		SnokyeBin\Newtonsoft.Json.xml = SnokyeBin\Newtonsoft.Json.xml
-		SnokyeBin\Snokye.Control.dll = SnokyeBin\Snokye.Control.dll
-		SnokyeBin\Snokye.Control.pdb = SnokyeBin\Snokye.Control.pdb
-		SnokyeBin\Snokye.Utility.dll = SnokyeBin\Snokye.Utility.dll
-		SnokyeBin\Snokye.Utility.pdb = SnokyeBin\Snokye.Utility.pdb
-		SnokyeBin\Snokye.VVM.dll = SnokyeBin\Snokye.VVM.dll
-		SnokyeBin\Snokye.VVM.pdb = SnokyeBin\Snokye.VVM.pdb
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snokye.Utility", "..\Snokye\Snokye.Utility\Snokye.Utility.csproj", "{0A84DB02-41D1-4141-96A5-6E5871C9C5B4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snokye.Controls", "..\Snokye\Snokye.Controls\Snokye.Controls.csproj", "{169C9845-900E-4327-A37D-48C00BAFD050}"
