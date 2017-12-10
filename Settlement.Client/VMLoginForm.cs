@@ -11,7 +11,7 @@ using System.IO;
 
 namespace Settlement.Client
 {
-    public class VMLoginForm : EntityBasedViewModel
+    public class VMLoginForm : ViewModelBase
     {
         private Dictionary<string, string> _userHistory = new Dictionary<string, string>();
 
