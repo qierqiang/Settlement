@@ -1,4 +1,5 @@
-﻿using Snokye.VVM;
+﻿using Snokye.Controls;
+using Snokye.VVM;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,15 @@ namespace Settlement.Client
 {
     public partial class ChangePasswordForm : AutoEditForm
     {
-        public ChangePasswordForm(VMChangePwd viewModel, string title) : base(viewModel, "修改密码") { }
+        public ChangePasswordForm(VMChangePwd viewModel, string title) : base(viewModel, "修改密码")
+        {
+            viewModel.Submitted += OnSubmitted;
+        }
+
+        private void OnSubmitted()
+        {
+            Msgbox.Information("密码已经修改成功，请牢记新密码。");
+            Close();
+        }
     }
 }

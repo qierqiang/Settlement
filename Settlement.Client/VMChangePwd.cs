@@ -30,7 +30,7 @@ namespace Settlement.Client
             }
             if (NewPasswrod != RepPassword)
             {
-                ValidateFialed?.Invoke(nameof(RepPassword), "两次输入的密码不一致！");
+                ValidateFailed?.Invoke(nameof(RepPassword), "两次输入的密码不一致！");
                 return false;
             }
             using (SettlementContainer c = new SettlementContainer())
@@ -40,7 +40,7 @@ namespace Settlement.Client
                             select u.Password;
                 if (OldPassword.GetMD5() != query.FirstOrDefault())
                 {
-                    ValidateFialed?.Invoke(nameof(OldPassword), "原密码不正确！");
+                    ValidateFailed?.Invoke(nameof(OldPassword), "原密码不正确！");
                     return false;
                 }
             }

@@ -52,8 +52,6 @@ namespace Settlement.Client
         [AutoGenControl(typeof(CheckBox))]
         public bool RememberPwd { get; set; }
 
-        public Action<string, string> ValidateFailed;
-
         public override bool Submit()
         {
             if (!base.Submit())
@@ -96,9 +94,9 @@ namespace Settlement.Client
         {
             if (propertyName == nameof(UserName))
             {
-                if (_userHistory.ContainsKey(nameof(UserName)))
+                if (_userHistory.ContainsKey(UserName))
                 {
-                    string pwd = _userHistory[nameof(UserName)];
+                    string pwd = _userHistory[UserName];
                     if (pwd != null)
                     {
                         Password = pwd;

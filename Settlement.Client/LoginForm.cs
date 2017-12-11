@@ -32,6 +32,7 @@ namespace Settlement.Client
 
         public void DataBind()
         {
+            cmbUserName.DataSource = _vm.UserHistory;
             cmbUserName.DataBindings.Add(new Binding("Text", _vm, "UserName", false, DataSourceUpdateMode.OnPropertyChanged));
             txtPwd.DataBindings.Add(new Binding("Text", _vm, "Password", false, DataSourceUpdateMode.OnPropertyChanged));
             cClearLogin.DataBindings.Add(new Binding("Checked", _vm, "ClearLogin", false, DataSourceUpdateMode.OnPropertyChanged));
