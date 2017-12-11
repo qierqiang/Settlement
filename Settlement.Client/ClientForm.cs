@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using Snokye.Utility;
 using Snokye.Controls;
 using Snokye.VVM;
+using System.Reflection;
 
 namespace Settlement.Client
 {
@@ -151,10 +152,11 @@ namespace Settlement.Client
 
         private void changePwdToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //ChangePasswordForm.ViewModel model = new ChangePasswordForm.ViewModel();
-            //model.ID = ClientInfo.UserID;
-            //model = ViewModelProxy.Proxy(model);
-            //OpenDialogForm(typeof(AutoEditForm), "修改密码", model);
+            VMChangePwd model = new VMChangePwd();
+            model.ID = ClientInfo.UserID;
+            model = ViewModelProxy.Proxy(model);
+
+            OpenDialogForm(typeof(ChangePasswordForm), "修改密码", model);
         }
 
         public Form OpenMDIForm(Type formType)

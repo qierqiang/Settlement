@@ -1,4 +1,4 @@
-﻿namespace Snokye.VVM
+﻿namespace Settlement.Client
 {
     partial class ChangePasswordForm
     {
@@ -34,10 +34,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(730, 390);
+            this.ClientSize = new System.Drawing.Size(865, 390);
             this.Name = "ChangePasswordForm";
             this.Text = "ChangePasswordForm";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

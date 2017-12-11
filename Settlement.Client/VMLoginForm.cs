@@ -54,32 +54,32 @@ namespace Settlement.Client
 
         public Action<string, string> ValidateFailed;
 
-        public bool Submit()
+        public override bool Submit()
         {
-            if (!ValidateAttribute.ValidateObject(this, out string p, out string r))
+            if (!base.Submit())
             {
-                ValidateFailed?.Invoke(p, r);
                 return false;
             }
 
-            SettlementContainer container = new SettlementContainer();
-            string hashValue = Password.GetMD5();
-            var user = container.UserInfoSet.FirstOrDefault(u => u.UserName == UserName && u.Password == hashValue);
-
-            if (user == null)
+            using (SettlementContainer container = new SettlementContainer())
             {
-                ValidateFailed?.Invoke(nameof(UserName), "用户名不存在或密码错误！");
-                return false;
-            }
-            if (user.Disabled)
-            {
-                ValidateFailed?.Invoke(nameof(UserName), "该用户已被禁用！");
-                return false;
-            }
+                string hashValue = Password.GetMD5();
+                var user = container.UserInfoSet.FirstOrDefault(u => u.UserName == UserName && u.Password == hashValue);
 
-            ClientInfo.UserID = user.Id;
-            ClientInfo.UserLoginName = user.UserName;
-            ClientInfo.UserName = user.DisplayName;
+                if (user == null)
+                {
+                    ValidateFailed?.Invoke(nameof(UserName), "用户名不存在或密码错误！");
+                    return false;
+                }
+                if (user.Disabled)
+                {
+                    ValidateFailed?.Invoke(nameof(UserName), "该用户已被禁用！");
+                    return false;
+                }
+                ClientInfo.UserID = user.Id;
+                ClientInfo.UserLoginName = user.UserName;
+                ClientInfo.UserName = user.DisplayName;
+            }
 
             if (RememberPwd)
             {
