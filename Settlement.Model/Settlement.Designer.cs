@@ -11,7 +11,7 @@
 [assembly: global::System.Data.Objects.DataClasses.EdmSchemaAttribute()]
 
 // 原始文件名:
-// 生成日期: 2017-12-11 10:30:28
+// 生成日期: 2017-12-12 17:04:55
 namespace Settlement.Model
 {
     
