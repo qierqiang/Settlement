@@ -48,13 +48,9 @@ namespace Settlement.Client
 
         private void OpenFile(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            openFileDialog.Filter = "文本文件(*.txt)|*.txt|所有文件(*.*)|*.*";
-            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string FileName = openFileDialog.FileName;
-            }
+            UserManage f = new UserManage();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)

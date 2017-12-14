@@ -99,6 +99,12 @@
     <Compile Include="UserManage.Designer.cs">
       <DependentUpon>UserManage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserManageFilterBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserManageFilterBar.Designer.cs">
+      <DependentUpon>UserManageFilterBar.cs</DependentUpon>
+    </Compile>
     <Compile Include="VMChangePwd.cs" />
     <Compile Include="VMLoginForm.cs" />
     <Compile Include="Program.cs" />
@@ -130,6 +136,9 @@
     </Compile>
     <EmbeddedResource Include="UserManage.resx">
       <DependentUpon>UserManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManageFilterBar.resx">
+      <DependentUpon>UserManageFilterBar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.Config" />
     <None Include="Properties\Settings.settings">
