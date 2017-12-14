@@ -36,32 +36,31 @@
             this.colUserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDisplayName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDisabled = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.userManageFilterBar1 = new Settlement.Client.UserManageFilterBar();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewer1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userManageFilterBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Location = new System.Drawing.Point(0, 96);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(862, 390);
+            this.tabControl1.Size = new System.Drawing.Size(862, 294);
             this.tabControl1.TabIndex = 5;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.gridViewer1);
-            this.tabPage1.Controls.Add(this.userManageFilterBar1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(854, 364);
+            this.tabPage1.Size = new System.Drawing.Size(854, 268);
             this.tabPage1.TabIndex = 1;
             this.tabPage1.Text = "用户信息";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -87,13 +86,13 @@
             this.colDisplayName,
             this.colDisabled});
             this.gridViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridViewer1.Location = new System.Drawing.Point(3, 47);
+            this.gridViewer1.Location = new System.Drawing.Point(3, 3);
             this.gridViewer1.MultiSelect = false;
             this.gridViewer1.Name = "gridViewer1";
             this.gridViewer1.ReadOnly = true;
             this.gridViewer1.RowTemplate.Height = 23;
             this.gridViewer1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridViewer1.Size = new System.Drawing.Size(848, 314);
+            this.gridViewer1.Size = new System.Drawing.Size(848, 262);
             this.gridViewer1.TabIndex = 0;
             // 
             // ID
@@ -126,18 +125,6 @@
             this.colDisabled.Name = "colDisabled";
             this.colDisabled.ReadOnly = true;
             // 
-            // userManageFilterBar1
-            // 
-            this.userManageFilterBar1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.userManageFilterBar1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.userManageFilterBar1.FilterString = null;
-            this.userManageFilterBar1.Location = new System.Drawing.Point(3, 3);
-            this.userManageFilterBar1.MinimumSize = new System.Drawing.Size(500, 39);
-            this.userManageFilterBar1.Name = "userManageFilterBar1";
-            this.userManageFilterBar1.Parameters = null;
-            this.userManageFilterBar1.Size = new System.Drawing.Size(848, 44);
-            this.userManageFilterBar1.TabIndex = 1;
-            // 
             // UserManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -150,7 +137,6 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridViewer1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userManageFilterBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -165,6 +151,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colUserName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDisplayName;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colDisabled;
-        private UserManageFilterBar userManageFilterBar1;
     }
 }
